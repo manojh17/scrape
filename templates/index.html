@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Amazon Scraper</title>
+</head>
+<body>
+    <h2>🛒 Amazon Product Scraper</h2>
+    <form method="post">
+        <label for="url">Amazon Product URL:</label><br>
+        <input type="text" name="url" id="url" required style="width: 400px;"><br><br>
+        <button type="submit">Scrape</button>
+    </form>
+
+    {% if result %}
+        <h3>🔍 Scraped Info:</h3>
+        <p><strong>📦 Title:</strong> {{ result.title }}</p>
+        <p><strong>💰 Price:</strong> {{ result.price }}</p>
+        <p><strong>⭐ Rating:</strong> {{ result.rating }}</p>
+    {% endif %}
+</body>
+</html>
